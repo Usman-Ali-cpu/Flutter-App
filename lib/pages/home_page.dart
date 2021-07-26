@@ -7,7 +7,7 @@ class HomeApp extends StatelessWidget {
     int day = 30;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blueGrey[700],
+        // backgroundColor: Colors.blueGrey[700],
         title: Text("App Bar"),
         centerTitle: true,
       ),
