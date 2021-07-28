@@ -1,11 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:iam_rich/utils/routes.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  String name = "";
+  bool changeButton = false;
   TextFormField getTextField(String inputlable, String hint, bool hide) {
     return TextFormField(
       obscureText: hide,
       decoration: InputDecoration(labelText: inputlable, hintText: hint),
+      onChanged: (value) {
+        name = value;
+        setState(() {});
+      },
     );
   }
 
@@ -25,7 +36,7 @@ class LoginPage extends StatelessWidget {
                 height: 30.0,
               ),
               Text(
-                "Wellcome To App",
+                "Wellcome $name To App",
                 style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.w600,
@@ -45,7 +56,42 @@ class LoginPage extends StatelessWidget {
                     SizedBox(
                       height: 30.0,
                     ),
-                    ElevatedButton(
+                 InkWell(
+                   onTap: ()  {
+                     setState(() {
+                       changeButton = true;
+                     });
+                     Future.delayed(Duration(seconds: 2));
+                     Navigator.pushNamed(context, MyRoutes.homeroute);
+                   },
+
+                   child: AnimatedContainer(
+                     duration: Duration(seconds: 1),
+                     height: 50,
+                     width: changeButton? 100: 140,
+                     alignment: Alignment.center,
+
+                     child:changeButton?
+                     Icon(
+                       Icons.done,
+                       color: Colors.white,
+                     ):
+                     Text(
+                       "Login",
+                       style: TextStyle(
+                         color: Colors.white,
+                         fontSize: 18.0,
+                         fontWeight: FontWeight.w500,
+                       ),
+                     ),
+                     decoration: BoxDecoration(
+                       borderRadius: BorderRadius.circular(changeButton? 100: 20),
+                       color: Colors.green[600],
+                     ),
+                   ),
+                 ) ,
+
+                    /*ElevatedButton(
                       onPressed: () {
                         Navigator.pushNamed(context, MyRoutes.homeroute);
                       },
@@ -64,7 +110,7 @@ class LoginPage extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                    ),
+                    ),*/
                   ],
                 ),
               ),
