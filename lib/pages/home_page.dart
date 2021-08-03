@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iam_rich/widgets/drawer.dart';
 
 class HomeApp extends StatelessWidget {
   @override
@@ -7,16 +8,16 @@ class HomeApp extends StatelessWidget {
     int day = 30;
     return Scaffold(
       appBar: AppBar(
-        // backgroundColor: Colors.blueGrey[700],
-        title: Text("App Bar"),
-        centerTitle: true,
+        title: Text(
+          "Catalog App",
+        ),
       ),
       body: Container(
         child: Center(
           child: Text("$day Days of Flutter "),
         ),
       ),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
     );
   }
 }
