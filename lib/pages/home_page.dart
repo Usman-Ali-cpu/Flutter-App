@@ -13,6 +13,7 @@ class HomeApp extends StatelessWidget {
         ),
       ),
       body: Container(
+        color: Colors.amber,
         child: Center(
           child: Text("$day Days of Flutter "),
         ),

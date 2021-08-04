@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ThemeApp {
   static ThemeData get themeslight => ThemeData(
-        primarySwatch: Colors.lightGreen,
+        primarySwatch: Colors.cyan,
         appBarTheme: AppBarTheme(
           color: Colors.white12,
           elevation: 0.0,

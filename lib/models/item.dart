@@ -1,5 +1,5 @@
 class Items {
-  final String id;
+  final num id;
   final String name;
   final num price;
   final String description;

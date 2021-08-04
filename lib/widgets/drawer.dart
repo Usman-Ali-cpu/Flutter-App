@@ -7,19 +7,18 @@ class MyDrawer extends StatelessWidget {
     // TODO: implement build
     return Drawer(
       child: Container(
-        color: Colors.lightGreen,
-
+        color: Colors.cyan,
         child: ListView(
           children: [
             DrawerHeader(
               padding: EdgeInsets.zero,
               child: UserAccountsDrawerHeader(
                 margin: EdgeInsets.zero,
-                accountEmail: Text("osman@gmail.com",
+                accountEmail: Text(
+                  "osman@gmail.com",
                   style: TextStyle(
                     color: Colors.white,
                   ),
-
                 ),
                 accountName: Text(
                   "Osman Ali",
