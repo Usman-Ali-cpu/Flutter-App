@@ -24,16 +24,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
 /*
 class MyApp extends StatelessWidget{
   @override
