@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:iam_rich/models/item.dart';
+import 'package:iam_rich/pages/cart_page.dart';
 import 'package:iam_rich/pages/home_detail_page.dart';
 import 'package:iam_rich/widgets/drawer.dart';
 import 'package:iam_rich/widgets/item_widget.dart';
@@ -44,6 +45,24 @@ class _HomeAppState extends State<HomeApp> {
         title: Text(
           "Catalog App",
         ),
+        actions: [
+          IconButton(
+            icon: Icon(
+              Icons.search,
+              color: Colors.black,
+            ),
+            onPressed: () {
+              // do something
+            },
+          )
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => CartPage()));
+        },
+        child: const Icon(Icons.shopping_cart_sharp),
       ),
       body: (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
           ? ListView.builder(
@@ -56,8 +75,11 @@ class _HomeAppState extends State<HomeApp> {
                       MaterialPageRoute(
                           builder: (context) =>
                               HomeDetail(catalog: CatalogModel.items[index]))),
-                  child: ItemWidget(
-                    item: CatalogModel.items[index],
+                  child: Padding(
+                    padding: EdgeInsets.only(bottom: 6.0),
+                    child: ItemWidget(
+                      item: CatalogModel.items[index],
+                    ),
                   ),
                 );
               },
