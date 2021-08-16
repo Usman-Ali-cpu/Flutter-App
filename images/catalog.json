@@ -30,7 +30,7 @@
             "price": 999,
             "description": "The OPPO, a mobile phone brand.",
             "color": "33505a",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThgZK1aFhJlWbHimPSpWysQ5Rasy39z4iYsg&usqp=CAU"
+            "image": "https://static.digit.in/product/97036a3ef3b60f99a34cf0e16fb867896146a6e2.jpeg?tr=w-1200"
         },
         {
             "id": 5,
@@ -46,7 +46,7 @@
             "price": 5400,
             "description": "vivo V21. 44MP OIS Selfie, Be the Light at Night.",
             "color": "33505a",
-            "image": "https://i.gadgets360cdn.com/products/large/redmi-note-10s-db-600x800-1620030866.jpg?downsize=240:*&output-quality=80&output-format=webp"
+            "image": "https://static.digit.in/product/97036a3ef3b60f99a34cf0e16fb867896146a6e2.jpeg?tr=w-1200"
         },
         {
             "id": 7,
@@ -70,7 +70,7 @@
             "price": 1300,
             "description": "iPhone - is the most popular smartphone worldwide. Here in Pakistan, things are no different.",
             "color": "33505a",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdKeHqtRm_lpgP5ahk_9lXR53tPknM1hfK3Q&usqp=CAU"
+            "image": "https://m.media-amazon.com/images/I/41sGASjc4-L.jpg"
         },
         {
             "id": 10,
@@ -86,7 +86,7 @@
             "price": 1500,
             "description": "OPPO, a mobile phone brand enjoyed by young people around the world.",
             "color": "33505a",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjJSCcYQsrmm4Wazz8MB-DSE1BUQUa4ZahYw&usqp=CAU"
+            "image": "https://static.digit.in/product/284c81498a93a82db7b5db6600494c20bee4f18e.jpeg?tr=w-1200"
         },
         {
             "id": 12,
@@ -94,7 +94,7 @@
             "price": 500,
             "description": "Samsung is demonstrating the Galaxy S21 series.",
             "color": "33505a",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdKeHqtRm_lpgP5ahk_9lXR53tPknM1hfK3Q&usqp=CAU"
+            "image": "https://assets.mspimages.in/promo/Reno6-Pro-july-msp-finder-back.jpg"
         },
         {
             "id": 13,
@@ -102,7 +102,7 @@
             "price": 2000,
             "description": "Discover the innovative world of Infinix and shop everything MOBILE.",
             "color": "https://github.com/starlock/vino/wiki/API-Reference",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjJSCcYQsrmm4Wazz8MB-DSE1BUQUa4ZahYw&usqp=CAU"
+            "image": "https://static.digit.in/product/284c81498a93a82db7b5db6600494c20bee4f18e.jpeg?tr=w-1200"
         }
     ]
 }

@@ -44,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
     await Future.delayed(Duration(seconds: 1));
     await Navigator.pushNamed(context, MyRoutes.homeroute);
     // Future.delayed(Duration(seconds: 1));
-    setState(() async {
+    setState(() {
       changeButton = false;
     });
     // }
@@ -114,8 +114,6 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                       ),
-
-                      
 
                       /*ElevatedButton(
                           onPressed: () {

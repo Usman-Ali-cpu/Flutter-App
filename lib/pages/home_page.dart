@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:iam_rich/models/item.dart';
+import 'package:iam_rich/pages/home_detail_page.dart';
 import 'package:iam_rich/widgets/drawer.dart';
 import 'package:iam_rich/widgets/item_widget.dart';
 
@@ -45,65 +46,27 @@ class _HomeAppState extends State<HomeApp> {
         ),
       ),
       body: (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
-          ? GridView.builder(
-
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    mainAxisSpacing: 15,
-                    crossAxisCount: 2,
-                    crossAxisSpacing: 10,
-
-
-                ),
-                itemBuilder: (context, index){
-
-                  final item = CatalogModel.items[index];
-                  return Card(
-                    clipBehavior: Clip.antiAlias,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: GridTile(
-                        header: Container(
-                          padding: EdgeInsets.all(10),
-                          color: Colors.cyan,
-                          child: Text(
-                              item.name,
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
-                          ),
-                        ),
-                        child: Image.network(
-                            item.image,
-
-                        ),
-                        footer: Container(
-                          padding: EdgeInsets.all(10),
-                          color: Colors.black,
-                          child: Text(
-                            item.price.toString(),
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                    ),
-                  );
-
-                },
-                itemCount: CatalogModel.items.length,
-              )
-          /*.builder(
+          ? ListView.builder(
               padding: EdgeInsets.all(10.0),
               itemCount: CatalogModel.items.length,
               itemBuilder: (BuildContext context, int index) {
-                return ItemWidget(
-                  item: CatalogModel.items[index],
+                return InkWell(
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              HomeDetail(catalog: CatalogModel.items[index]))),
+                  child: ItemWidget(
+                    item: CatalogModel.items[index],
+                  ),
                 );
               },
-            )*/
-          : Center(
-              child: CircularProgressIndicator(),
+            )
+          : Container(
+              padding: EdgeInsets.all(20.0),
+              child: Center(
+                child: CircularProgressIndicator(),
+              ),
             ),
       drawer: MyDrawer(),
     );

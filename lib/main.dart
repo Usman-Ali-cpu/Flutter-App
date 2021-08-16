@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeApp(),
+      home: LoginPage(),
       theme: ThemeApp.themeslight,
       // darkTheme: ThemeApp.themesdark,
       routes: {
@@ -24,6 +24,16 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
 /*
 class MyApp extends StatelessWidget{
   @override

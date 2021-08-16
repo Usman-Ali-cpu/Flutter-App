@@ -3,7 +3,7 @@ class CatalogModel {
 }
 
 class Item {
-  final num id;
+  final int id;
   final String name;
   final num price;
   final String description;
